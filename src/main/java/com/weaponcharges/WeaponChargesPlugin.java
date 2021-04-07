@@ -104,16 +104,7 @@ public class WeaponChargesPlugin extends Plugin
 			"Your chainmace has (?:(\\d+)|((\\d+),(\\d+))) charges? left powering it\\."
 	);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	int[] chargeableWeaponIDs = { ItemID.ABYSSAL_TENTACLE,
-=======
-	private final int[] chargeableWeaponIDs = {
-			ItemID.ABYSSAL_TENTACLE,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-	int[] chargeableWeaponIDs = { ItemID.ABYSSAL_TENTACLE,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			ItemID.ARCLIGHT,
 			ItemID.CRAWS_BOW, ItemID.CRAWS_BOW_U,
 			ItemID.CRYSTAL_BOW, ItemID.CRYSTAL_HALBERD,
@@ -125,16 +116,7 @@ public class WeaponChargesPlugin extends Plugin
 			ItemID.THAMMARONS_SCEPTRE, ItemID.THAMMARONS_SCEPTRE_U,
 			ItemID.TRIDENT_OF_THE_SEAS, ItemID.UNCHARGED_TRIDENT, ItemID.UNCHARGED_TRIDENT_E, ItemID.TRIDENT_OF_THE_SEAS_E, ItemID.TRIDENT_OF_THE_SEAS_FULL,
 			ItemID.TRIDENT_OF_THE_SWAMP, ItemID.TRIDENT_OF_THE_SWAMP_E, ItemID.UNCHARGED_TOXIC_TRIDENT, ItemID.UNCHARGED_TOXIC_TRIDENT_E,
-<<<<<<< HEAD
-<<<<<<< HEAD
 			ItemID.VIGGORAS_CHAINMACE, ItemID.VIGGORAS_CHAINMACE_U };
-=======
-			ItemID.VIGGORAS_CHAINMACE, ItemID.VIGGORAS_CHAINMACE_U
-	};
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			ItemID.VIGGORAS_CHAINMACE, ItemID.VIGGORAS_CHAINMACE_U };
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 
 	private int abyssalTentacleCharges, arclightCharges, crawsBowCharges, crystalBowCharges, crystalHalberdCharges,
 			ibansStaffCharges, sanguinestiStaffCharges, saradominsBlessedSwordCharges, scytheOfViturCharges,
@@ -167,14 +149,6 @@ public class WeaponChargesPlugin extends Plugin
 	@Inject
 	private WeaponChargesConfig config;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	// Limits destroy callback to once per tick
-	private int lastCheckTick;
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 
 	@Provides
     WeaponChargesConfig getConfig(ConfigManager configManager)
@@ -193,33 +167,15 @@ public class WeaponChargesPlugin extends Plugin
 	{
 		overlayManager.remove(overlay);
 		infoBoxManager.removeIf(WeaponChargesInfobox.class::isInstance);
-<<<<<<< HEAD
-<<<<<<< HEAD
 		// Limits destroy callback to once per tick
 		int lastCheckTick = -1;
-=======
-		lastCheckTick = -1;
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		// Limits destroy callback to once per tick
-		int lastCheckTick = -1;
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	}
 
 	@Subscribe
 	public void onConfigChanged(ConfigChanged event)
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
 		boolean validWeapon = false;
 		if (!event.getGroup().equals("weaponcharges"))
-=======
-		if (!event.getGroup().equals("itemCharge"))
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		boolean validWeapon = false;
-		if (!event.getGroup().equals("weaponcharges"))
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		{
 			return;
 		}
@@ -229,10 +185,6 @@ public class WeaponChargesPlugin extends Plugin
 			infoBoxManager.removeIf(WeaponChargesInfobox.class::isInstance);
 			return;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		currentWeaponID = client.getItemContainer(InventoryID.EQUIPMENT).getItem(EquipmentInventorySlot.WEAPON.getSlotIdx()).getId();
 		for (int i : chargeableWeaponIDs) {
 			if (currentWeaponID == i)
@@ -243,7 +195,6 @@ public class WeaponChargesPlugin extends Plugin
 		{
 			addInfobox(currentWeaponID);
 		}
-<<<<<<< HEAD
 
 		if (!config.showAbyssalTentacleCharges() || (config.abyssalTentacle() > config.infoboxThreshold()))
 		{
@@ -290,87 +241,17 @@ public class WeaponChargesPlugin extends Plugin
 			removeInfobox(WeaponWithSlot.THAMMARONS_SCEPTRE);
 		}
 		if (!config.showTridentOfTheSeasCharges() || (config.tridentOfTheSeas() > config.infoboxThreshold()))
-=======
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
-
-		if (!config.showAbyssalTentacleCharges() || (config.abyssalTentacle() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.ABYSSAL_TENTACLE);
-		}
-		if (!config.showArclightCharges() || (config.arclight() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.ARCLIGHT);
-		}
-		if (!config.showCrawsBowCharges() || (config.crawsBow() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.CRAWS_BOW);
-		}
-		if (!config.showCrystalBowCharges() || (config.crystalBow() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.CRYSTAL_BOW);
-		}
-		if (!config.showCrystalHalberdCharges() || (config.crystalHalberd() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.CRYSTAL_HALBERD);
-		}
-		if (!config.showIbansStaffCharges() || (config.ibansStaff() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.IBANS_STAFF);
-		}
-		if (!config.showSanguinestiStaffCharges() || (config.sanguinestiStaff() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.SANGUINESTI_STAFF);
-		}
-		if (!config.showSaradominsBlessedSwordCharges() || (config.saradominsBlessedSword() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.SARADOMINS_BLESSED_SWORD);
-		}
-		if (!config.showScytheOfViturCharges() || (config.scytheOfVitur() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.SCYTHE_OF_VITUR);
-		}
-		/*if (!config.showSlayersStaffECharges() || (config.slayersStaffE() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.SLAYERS_STAFF_E);
-		}*/
-		if (!config.showThammaronsSceptreCharges() || (config.thammaronsSceptre() > config.infoboxThreshold()))
-		{
-			removeInfobox(WeaponWithSlot.THAMMARONS_SCEPTRE);
-		}
-<<<<<<< HEAD
-		if (!config.showTridentOfTheSeasCharges())
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		if (!config.showTridentOfTheSeasCharges() || (config.tridentOfTheSeas() > config.infoboxThreshold()))
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		{
 			removeInfobox(WeaponWithSlot.TRIDENT_OF_THE_SEAS);
 			removeInfobox(WeaponWithSlot.TRIDENT_OF_THE_SEAS_E);
 			removeInfobox(WeaponWithSlot.TRIDENT_OF_THE_SEAS_FULL);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 		if (!config.showTridentOfTheSwampCharges() || (config.tridentOfTheSwamp() > config.infoboxThreshold()))
-=======
-		if (!config.showTridentOfTheSwampCharges())
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		if (!config.showTridentOfTheSwampCharges() || (config.tridentOfTheSwamp() > config.infoboxThreshold()))
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		{
 			removeInfobox(WeaponWithSlot.TRIDENT_OF_THE_SWAMP);
 			removeInfobox(WeaponWithSlot.TRIDENT_OF_THE_SWAMP_E);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 		if (!config.showViggorasChainmaceCharges() || (config.viggorasChainmace() > config.infoboxThreshold()))
-=======
-		if (!config.showViggorasChainmaceCharges())
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		if (!config.showViggorasChainmaceCharges() || (config.viggorasChainmace() > config.infoboxThreshold()))
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		{
 			removeInfobox(WeaponWithSlot.VIGGORAS_CHAINMACE);
 		}
@@ -656,8 +537,6 @@ public class WeaponChargesPlugin extends Plugin
 		}
 		if (validWeapon) {
 			if (newWeaponID == ItemID.ABYSSAL_TENTACLE && config.showAbyssalTentacleCharges()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 				addInfobox(ItemID.ABYSSAL_TENTACLE);
 			}
 			if (newWeaponID == ItemID.ARCLIGHT && config.showArclightCharges()) {
@@ -700,57 +579,6 @@ public class WeaponChargesPlugin extends Plugin
 			}
 			if (newWeaponID == ItemID.VIGGORAS_CHAINMACE && config.showViggorasChainmaceCharges()) {
 				addInfobox(ItemID.VIGGORAS_CHAINMACE);
-=======
-				addInfobox(WeaponWithSlot.ABYSSAL_TENTACLE, ItemID.ABYSSAL_TENTACLE, "Abyssal Tentacle");
-=======
-				addInfobox(ItemID.ABYSSAL_TENTACLE);
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
-			}
-			if (newWeaponID == ItemID.ARCLIGHT && config.showArclightCharges()) {
-				addInfobox(ItemID.ARCLIGHT);
-			}
-			if (newWeaponID == ItemID.CRAWS_BOW && config.showCrawsBowCharges()) {
-				addInfobox(ItemID.CRAWS_BOW);
-			}
-			if (newWeaponID == ItemID.CRYSTAL_BOW && config.showCrystalBowCharges()) {
-				addInfobox(ItemID.CRYSTAL_BOW);
-			}
-			if (newWeaponID == ItemID.CRYSTAL_HALBERD && config.showCrystalHalberdCharges()) {
-				addInfobox(ItemID.CRYSTAL_HALBERD);
-			}
-			if ((newWeaponID == ItemID.IBANS_STAFF || newWeaponID == ItemID.IBANS_STAFF_U) && config.showIbansStaffCharges()) {
-				addInfobox(ItemID.IBANS_STAFF);
-			}
-			if (newWeaponID == ItemID.SANGUINESTI_STAFF && config.showSanguinestiStaffCharges()) {
-				addInfobox(ItemID.SANGUINESTI_STAFF);
-			}
-			if (newWeaponID == ItemID.SARADOMINS_BLESSED_SWORD && config.showSaradominsBlessedSwordCharges()) {
-				addInfobox(ItemID.SARADOMINS_BLESSED_SWORD);
-			}
-			if (newWeaponID == ItemID.SCYTHE_OF_VITUR && config.showScytheOfViturCharges()) {
-				addInfobox(ItemID.SCYTHE_OF_VITUR);
-			}
-		/*	if (newWeaponID == ItemID.SLAYERS_STAFF_E && config.showSlayersStaffECharges()) {
-				addInfobox(ItemID.SLAYERS_STAFF_E);
-			}*/
-			if (newWeaponID == ItemID.THAMMARONS_SCEPTRE && config.showThammaronsSceptreCharges()) {
-				addInfobox(ItemID.THAMMARONS_SCEPTRE);
-			}
-			if ((newWeaponID == ItemID.TRIDENT_OF_THE_SEAS || newWeaponID == ItemID.TRIDENT_OF_THE_SEAS_E ||
-					newWeaponID == ItemID.TRIDENT_OF_THE_SEAS_FULL) && config.showTridentOfTheSeasCharges()) {
-				addInfobox(ItemID.TRIDENT_OF_THE_SEAS);
-			}
-			if ((newWeaponID == ItemID.TRIDENT_OF_THE_SWAMP || newWeaponID == ItemID.TRIDENT_OF_THE_SWAMP_E) &&
-					config.showTridentOfTheSwampCharges()) {
-				addInfobox(ItemID.TRIDENT_OF_THE_SWAMP_E);
-			}
-			if (newWeaponID == ItemID.VIGGORAS_CHAINMACE && config.showViggorasChainmaceCharges()) {
-<<<<<<< HEAD
-				addInfobox(WeaponWithSlot.VIGGORAS_CHAINMACE, ItemID.VIGGORAS_CHAINMACE, "Viggora's Chainmace");
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-				addInfobox(ItemID.VIGGORAS_CHAINMACE);
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			}
 		}
 	}
@@ -770,10 +598,6 @@ public class WeaponChargesPlugin extends Plugin
 		}
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	private void addInfobox(int id) {
 		if (id == ItemID.ABYSSAL_TENTACLE) {
 			addInfobox(WeaponWithSlot.ABYSSAL_TENTACLE, id, "Abyssal Tentacle");
@@ -819,11 +643,6 @@ public class WeaponChargesPlugin extends Plugin
 		}
 	}
 
-<<<<<<< HEAD
-=======
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	private void addInfobox(WeaponWithSlot type, int id, String name) {
 		if (!config.showInfoboxes()) return; //leave instantly since infoboxes are off
 		removeInfobox(type);
@@ -876,20 +695,10 @@ public class WeaponChargesPlugin extends Plugin
 			charges = -1;
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		if (charges <= 0 || charges > config.infoboxThreshold())
 		{
 			return;
 		}
-<<<<<<< HEAD
-=======
-		if (charges <= 0) { return; }
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 
 
 		final BufferedImage image = itemManager.getImage(id);

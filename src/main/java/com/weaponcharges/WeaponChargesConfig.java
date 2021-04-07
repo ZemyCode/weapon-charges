@@ -32,11 +32,7 @@ import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
 
-<<<<<<< HEAD
 @ConfigGroup("weaponcharges")
-=======
-@ConfigGroup("itemCharge")
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
 public interface WeaponChargesConfig extends Config
 {
 	@ConfigSection(
@@ -107,15 +103,7 @@ public interface WeaponChargesConfig extends Config
 	{
 		return 250;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 //---------------------------------------------------------------------------------------------------------------------
-=======
-
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-//---------------------------------------------------------------------------------------------------------------------
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	@ConfigItem(
 			keyName = "showInfobox",
 			name = "Infobox for Equipped Weapon",
@@ -129,10 +117,6 @@ public interface WeaponChargesConfig extends Config
 		return false;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	@ConfigItem(
 			keyName = "infoboxThreshold",
 			name = "Infobox Threshold",
@@ -145,7 +129,6 @@ public interface WeaponChargesConfig extends Config
 		return 20000;
 	}
 
-<<<<<<< HEAD
 //---------------------------------------------------------------------------------------------------------------------
 	@ConfigItem(
 			keyName = "chargesThreshold",
@@ -164,32 +147,6 @@ public interface WeaponChargesConfig extends Config
 			name = "Abyssal Tentacle",
 			description = "Show Abyssal Tentacle Charges",
 			position = 67,
-=======
-=======
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
-//---------------------------------------------------------------------------------------------------------------------
-	@ConfigItem(
-			keyName = "chargesThreshold",
-			name = "Charges Threshold",
-			description = "Displays weapon charges if on or below this threshold",
-			position = 7,
-			section = chargesSection
-	)
-	default int chargesThreshold()
-{
-	return 20000;
-}
-
-	@ConfigItem(
-			keyName = "showAbyssalTentacleCharges",
-			name = "Abyssal Tentacle",
-			description = "Show Abyssal Tentacle Charges",
-<<<<<<< HEAD
-			position = 6,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 67,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showAbyssalTentacleCharges()
@@ -219,15 +176,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showArclightCharges",
 			name = "Arclight",
 			description = "Show Arclight Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 68,
-=======
-			position = 7,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 68,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showArclightCharges()
@@ -257,15 +206,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showCrawsBowCharges",
 			name = "Craw's Bow",
 			description = "Show Craw's Bow Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 69,
-=======
-			position = 8,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 69,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showCrawsBowCharges()
@@ -295,15 +236,7 @@ public interface WeaponChargesConfig extends Config
 		keyName = "showCrystalBowCharges",
 		name = "Crystal Bow",
 		description = "Show Crystal Bow Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 		position = 70,
-=======
-		position = 9,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		position = 70,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 		section = chargesSection
 	)
 	default boolean showCrystalBowCharges()
@@ -333,15 +266,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showCrystalHalberdCharges",
 			name = "Crystal Halberd",
 			description = "Show Crystal Halberd Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 71,
-=======
-			position = 10,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 71,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showCrystalHalberdCharges()
@@ -371,15 +296,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showIbansStaffCharges",
 			name = "Iban's Staff",
 			description = "Show Iban's Staff Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 72,
-=======
-			position = 11,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 72,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showIbansStaffCharges()
@@ -409,15 +326,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showSanguinestiStaffCharges",
 			name = "Sanguinesti Staff",
 			description = "Show Sanguinesti Staff Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 73,
-=======
-			position = 12,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 73,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showSanguinestiStaffCharges()
@@ -447,15 +356,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showSaradominsBlessedSwordCharges",
 			name = "Saradomin's Blessed Sword",
 			description = "Show Saradomin's Blessed Sword Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 74,
-=======
-			position = 13,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 74,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showSaradominsBlessedSwordCharges()
@@ -485,15 +386,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showScytheOfViturCharges",
 			name = "Scythe of Vitur",
 			description = "Show Scythe of Vitur Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 75,
-=======
-			position = 14,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 75,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showScytheOfViturCharges()
@@ -523,15 +416,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showSlayersStaffECharges",
 			name = "Slayer's Staff (e)",
 			description = "Show Slayer's Staff (e) charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 76,
-=======
-			position = 15,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 76,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showSlayersStaffECharges()
@@ -561,15 +446,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showThammaronsSceptreCharges",
 			name = "Thammaron's Sceptre",
 			description = "Show Thammaron's Sceptre charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 77,
-=======
-			position = 16,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 77,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showThammaronsSceptreCharges()
@@ -599,15 +476,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showTridentOfTheSeasCharges",
 			name = "Trident of the Seas",
 			description = "Show Trident of the Seas Charges (including Trident of the Seas (e))",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 78,
-=======
-			position = 17,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 78,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showTridentOfTheSeasCharges()
@@ -637,15 +506,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showTridentOfTheSwampCharges",
 			name = "Trident of the Swamp",
 			description = "Show Trident of the Swamp Charges (including Trident of the Swamp (e))",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 79,
-=======
-			position = 18,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 79,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showTridentOfTheSwampCharges()
@@ -675,15 +536,7 @@ public interface WeaponChargesConfig extends Config
 			keyName = "showViggorasChainmaceCharges",
 			name = "Viggora's Chainmace",
 			description = "Show Viggora's Chainmace Charges",
-<<<<<<< HEAD
-<<<<<<< HEAD
 			position = 80,
-=======
-			position = 19,
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-			position = 80,
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 			section = chargesSection
 	)
 	default boolean showViggorasChainmaceCharges()

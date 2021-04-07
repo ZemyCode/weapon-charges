@@ -198,19 +198,9 @@ class WeaponChargesOverlay extends WidgetItemOverlay
 		textComponent.setPosition(new Point(bounds.x - 1, bounds.y + 15));
 		textComponent.setText(charges < 0 ? "?" : String.valueOf(charges));
 		textComponent.setColor(weaponChargePlugin.getColor(charges));
-<<<<<<< HEAD
-<<<<<<< HEAD
 		if (charges <= config.chargesThreshold()) {
 			textComponent.render(graphics);
 		}
-=======
-		textComponent.render(graphics);
->>>>>>> dc13b68... Base Commit, Plugin functional but not perfect
-=======
-		if (charges <= config.chargesThreshold()) {
-			textComponent.render(graphics);
-		}
->>>>>>> 9e9a4d34477107e44cc06bf79a1777c26fbe7e97
 	}
 
 	private boolean displayOverlay()
